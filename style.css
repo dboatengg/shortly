@@ -6,6 +6,7 @@
   /* ### Primary */
   --Cyan: hsl(180, 66%, 49%);
   --DarkViolet: hsl(257, 27%, 26%);
+  --White: hsl(0, 0%, 100%);
 
   /* ### Secondary */
   --Red: hsl(0, 87%, 67%);
@@ -27,4 +28,78 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--Gray);
+  font-size: 1.6rem;
+  color: var(--VeryDarkBlue);
+}
+a {
+  color: var(--VeryDarkBlue);
+  text-decoration: none;
+}
+.button {
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+  color: var(--White);
+}
+/************navbar**************/
+.header {
+  background-color: var(--White);
+}
+.logo {
+  width: 150px;
+  object-fit: contain;
+}
+.nav,
+.nav__menu {
+  display: flex;
+  align-items: center;
+}
+.nav__menu {
+  width: 70%;
+  justify-content: space-between;
+}
+.nav {
+  /* height: 10vh; */
+  height: 70px;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+.nav__button {
+  background-color: var(--Cyan);
+}
+.nav__item a:not(:last-child) {
+  margin-right: 4rem;
+}
+.nav__menu.active {
+  left: 0;
+}
+
+.hamburger {
+  display: none;
+}
+.bar {
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+@media only screen and (max-width: 800px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav__menu {
+    display: none;
+  }
 }
