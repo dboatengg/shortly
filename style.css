@@ -45,15 +45,27 @@ p {
 }
 .button {
   padding: 10px 25px;
-  border-radius: 10rem;
   background-color: var(--Cyan);
   font-size: 1rem;
   color: var(--White);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
+.button--round {
+  border-radius: 10rem;
+}
+.button--square {
+  border-radius: 0.5rem;
+  padding: 12px 25px;
+}
 /************navbar**************/
 .header {
   background-color: var(--White);
+}
+/* .logo {
+} */
+.logo img {
+  align-self: center;
+  /* width: 200px; */
 }
 .nav__content,
 .nav__menu {
@@ -76,7 +88,6 @@ p {
 }
 .nav__link {
   color: var(--VeryDarkBlue);
-  /* font-weight: 400; */
 }
 .nav__menu.active {
   left: 50%;
@@ -169,7 +180,7 @@ p {
   width: 90%;
   margin: auto;
   gap: 2rem;
-  padding: 4rem 0;
+  padding: 60px 0;
 }
 .hero__left {
   display: flex;
@@ -195,7 +206,7 @@ p {
   align-items: center;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 980px) {
   .hero__content {
     flex-direction: column;
   }
@@ -222,5 +233,54 @@ p {
 @media only screen and (max-width: 400px) {
   .hero__title {
     font-size: 2rem;
+  }
+}
+
+/************Shorten Link**************/
+.shorten-link {
+  width: 60%;
+  background: url("images/bg-shorten-desktop.svg"), var(--DarkViolet);
+  background-position: top center;
+  padding: 2rem;
+  margin: auto;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.7rem;
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.shorten-link__input {
+  width: 70%;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  outline: 0;
+  padding: 15px;
+}
+.shorten-link__input:focus,
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline-offset: 0;
+}
+@media only screen and (max-width: 980px) {
+  .shorten-link {
+    flex-direction: column;
+    background: url("images/bg-shorten-mobile.svg"), var(--DarkViolet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 70% 20%; */
+    width: 90%;
+    top: 700px;
+  }
+  .shorten-link__input,
+  .button--square {
+    width: 100%;
+    text-align: center;
   }
 }

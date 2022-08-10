@@ -22,9 +22,9 @@
     <header class="header">
       <nav class="nav">
         <div class="nav__content">
-          <a class="logo" href="index.html">
-            <img src="images/logo.svg" alt="" />
-          </a>
+          <!-- <a class="logo" href="index.html"> -->
+          <img class="logo" src="images/logo.svg" alt="" />
+          <!-- </a> -->
           <div class="nav__menu">
             <div class="nav__item nav__start">
               <a class="nav__link" href="#">Features</a>
@@ -34,7 +34,9 @@
             <!-- <hr /> -->
             <div class="nav__item nav__end">
               <a class="nav__link" href="#">Login</a>
-              <a class="nav__link button nav__button" href="#">Sign Up</a>
+              <a class="nav__link button button--round nav__button" href="#"
+                >Sign Up</a
+              >
             </div>
           </div>
           <div class="hamburger">
@@ -52,7 +54,9 @@
               Build your brand’s recognition and get detailed insights on how
               your links are performing.
             </p>
-            <a href="#" class="button hero__button">Get Started</a>
+            <a href="#" class="button button--round hero__button"
+              >Get Started</a
+            >
           </div>
           <img
             src="images/illustration-working.svg"
@@ -62,8 +66,14 @@
         </div>
       </section>
     </header>
-    <h1>Heading 1</h1>
-    <!-- link js file -->
+    <section class="shorten-link">
+      <input
+        class="shorten-link__input"
+        placeholder="Shorten a link here..."
+        type="text"
+      />
+      <a href="" class="button button--square">Shorten it!</a>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>
