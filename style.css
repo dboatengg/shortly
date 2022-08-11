@@ -249,10 +249,8 @@ p {
   justify-content: center;
   gap: 1rem;
   border-radius: 0.7rem;
-  position: absolute;
-  top: 600px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 40px;
+  position: relative;
 }
 .shorten-link__input {
   width: 70%;
@@ -276,7 +274,6 @@ p {
     background-size: cover;
     /* background-position: 70% 20%; */
     width: 90%;
-    top: 700px;
   }
   .shorten-link__input,
   .button--square {
