@@ -28,7 +28,8 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--Gray);
+  /* background-color: var(--Gray); */
+  background-color: #f0f1f6;
   font-size: 18px;
   color: var(--VeryDarkBlue);
 }
@@ -66,6 +67,11 @@ p {
 .logo img {
   align-self: center;
   /* width: 200px; */
+}
+.nav {
+  height: 20vh;
+  display: flex;
+  align-items: center;
 }
 .nav__content,
 .nav__menu {
@@ -173,7 +179,7 @@ p {
   overflow-x: hidden;
 }
 .hero__content {
-  min-height: 500px;
+  height: 90vh;
   display: flex;
   align-items: center;
   max-width: 1200px;
@@ -193,7 +199,7 @@ p {
   overflow: hidden;
 }
 .hero__title {
-  font-size: 4.5rem;
+  font-size: 4.8rem;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -279,5 +285,96 @@ p {
   .button--square {
     width: 100%;
     text-align: center;
+  }
+}
+
+/************stat*******************/
+.stat {
+  max-width: 1200px;
+  margin: 5rem auto 10rem auto;
+  width: 90%;
+  position: relative;
+}
+.stat__top {
+  text-align: center;
+  width: 50%;
+  max-width: 500px;
+  margin: auto;
+}
+.stat__cards::before {
+  height: 10px;
+  position: absolute;
+  width: 100%;
+  z-index: -99;
+  background: var(--Cyan);
+  content: "";
+}
+.stat__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 2rem;
+  margin: 4rem auto;
+  max-width: 1440px;
+  font-size: 16px;
+}
+.stat__cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--White);
+  padding: 0 4rem 2rem 2rem;
+  border-radius: 10px;
+  margin: auto;
+}
+.stat__cards .card:nth-child(2) {
+  position: relative;
+  top: 40px;
+}
+.stat__cards .card:nth-child(3) {
+  position: relative;
+  top: 80px;
+}
+.stat__cards img {
+  background-color: var(--DarkViolet);
+  padding: 1rem;
+  border-radius: 50%;
+  width: 80px;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 992px) {
+  .stat {
+    margin: 2rem auto;
+  }
+  .stat__cards {
+    flex-direction: column;
+  }
+  .stat__cards .card:nth-child(2) {
+    top: 0;
+  }
+  .stat__cards .card:nth-child(3) {
+    top: 0;
+  }
+  .stat__cards::before {
+    height: 10px;
+    position: absolute;
+    width: 100%;
+    z-index: -99;
+    background: var(--Cyan);
+    transform: rotate(90deg);
+    content: "";
+  }
+  .stat__cards img {
+    transform: translateY(0%);
+  }
+  .stat .card {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+  .stat__top {
+    width: 100%;
   }
 }
