@@ -227,7 +227,8 @@ select:focus {
 .hero__content img {
   display: flex;
   align-items: center;
-  width: 100%;
+  right: 0;
+  position: absolute;
 }
 
 @media only screen and (max-width: 980px) {
@@ -589,6 +590,6 @@ select:focus {
   .footer__content .social i {
     transition: all 0.1s ease-in-out;
     color: var(--White);
-    gaap: 1.1rem
+    gaap: 1.1rem;
   }
 }
