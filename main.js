@@ -13,7 +13,6 @@ shortenButton.addEventListener("click", printUrl);
 function printUrl(event) {
   event.preventDefault();
   if (shortenLinkInput && shortenLinkInput.value) {
-    // alert("Still working on this feature :)");
     let parenturl = document.createElement("div");
     parenturl.classList.add("shorten-link__display");
 
@@ -31,11 +30,15 @@ function printUrl(event) {
     copyurl.innerHTML = "copy";
     copyurl.classList.add("copy-url");
 
+    let deleteIcon = document.createElement("i");
+    deleteIcon.classList.add("fas", "fa-times", "close");
+
     div.appendChild(shortenurl);
     div.appendChild(copyurl);
 
     parenturl.appendChild(originalurl);
     parenturl.appendChild(div);
+    parenturl.appendChild(deleteIcon);
 
     shortenLink.appendChild(parenturl);
     console.log(parenturl);
@@ -49,12 +52,24 @@ function printUrl(event) {
         element.style.backgroundColor = "hsl(257, 27%, 26%)";
       });
     });
+
+    deleteIcon = document.querySelectorAll(".close");
+    displayBox = document.querySelectorAll(".shorten-link__display");
+
+    displayBoxArr = Array.from(displayBox);
+    deleteIconArr = Array.from(deleteIcon);
+
+    deleteIconArr.forEach((element, index) => {
+      element.addEventListener("click", () => {
+        displayBoxArr[index].style.display = "none";
+      });
+    });
   } else {
     //display error msg
     shortenLinkCardText.style.display = "block";
     shortenLinkInput.style.border = "2px solid hsl(0, 87%, 67%)";
 
-    //make error msg disppear after some time
+    //make error msg disppear after 3 seconds
     setTimeout(() => {
       shortenLinkCardText.style.display = "none";
       shortenLinkInput.style.border = "2px solid transparent";

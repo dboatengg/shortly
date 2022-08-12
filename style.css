@@ -290,7 +290,7 @@ select:focus {
 }
 .shorten-link__display {
   background-color: var(--White);
-  max-width: 700px;
+  max-width: 1000px;
   width: 90%;
   /* max-width: 700px; */
   margin: 0 auto 20px auto;
@@ -298,13 +298,17 @@ select:focus {
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  /* overflow-x: hidden; */
+  position: relative;
   overflow-x: scroll;
-  gap: 1.5rem;
+  gap: 1rem;
+  text-align: center;
 }
-/* ::-webkit-scrollbar {
-  width: none; 
-  background: none; 
-} */
+::-webkit-scrollbar {
+  width: 0;
+  background: none;
+  height: 0;
+}
 .shorten-link__display,
 .shorten-link__display div {
   display: flex;
@@ -312,13 +316,18 @@ select:focus {
 }
 .shorten-link__display div {
   gap: 15px;
+  margin-right: 15px;
 }
-.shorten-link__display .orginal-url {
+.shorten-link__display .original-url {
   font-weight: 500;
+  font-size: 12px;
+  word-wrap: break-word;
 }
 .shorten-link__display .shorten-url {
   color: var(--Cyan);
   font-weight: 600;
+  font-size: 16px;
+  word-wrap: break-word;
 }
 .shorten-link__display .copy-url {
   background-color: var(--Cyan);
@@ -331,6 +340,12 @@ select:focus {
 }
 .shorten-link__display .copy-url:hover {
   filter: brightness(1.05);
+}
+.shorten-link__display .close {
+  position: absolute;
+  right: 12px;
+  color: var(--Red);
+  cursor: pointer;
 }
 .shorten-link__input {
   width: 70%;
