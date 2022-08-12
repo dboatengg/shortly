@@ -443,6 +443,7 @@ select:focus {
   }
   .stat__cards {
     flex-direction: column;
+    gap: 3rem;
   }
   .stat__cards .card:nth-child(2) {
     top: 0;
@@ -500,7 +501,7 @@ select:focus {
     background: url("images/bg-boost-mobile.svg"), var(--DarkViolet);
   }
   .call-to-action h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   .call-to-action div {
     gap: 2rem;
@@ -554,7 +555,6 @@ select:focus {
   font-size: 25px;
 }
 .footer__content .social i:hover {
-  font-size: 25px;
   color: var(--Cyan);
 }
 .footer__content .social {
@@ -564,22 +564,28 @@ select:focus {
 }
 .footer__navigation .column p {
   font-size: 18px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
   .footer__content {
     flex-direction: column;
+    align-items: center;
   }
   .footer__navigation {
     flex-direction: column;
+    text-align: center;
+    align-items: center;
     width: 100%;
     margin: 2rem 0;
+  }
+  .footer__content .social {
+    justify-content: center;
   }
   .footer__content .social i {
     transition: all 0.1s ease-in-out;
     color: var(--White);
     gap: 1rem;
-    font-size: 35px;
+    font-size: 20px;
   }
 }
