@@ -1,6 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav__menu");
-const navLink = document.querySelectorAll(".nav__link");
+// const navLink = document.querySelectorAll(".nav__link");
 mainBody = document.getElementsByTagName("main")[0];
 heroBody = document.querySelector(".hero");
 
@@ -11,7 +11,7 @@ function openMenu() {
   navMenu.classList.toggle("active");
 }
 
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+// navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
 function closeMenu() {
   hamburger.classList.remove("active");

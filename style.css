@@ -425,6 +425,9 @@ p {
   .call-to-action h2 {
     font-size: 2.4rem;
   }
+  .call-to-action div {
+    gap: 2rem;
+  }
 }
 
 /**************footer****************/
