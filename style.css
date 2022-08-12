@@ -44,6 +44,12 @@ img {
 p {
   line-height: 1.7;
 }
+/* input:focus,
+textarea:focus,
+keygen:focus,
+select:focus {
+  outline-offset: 0;
+} */
 .button {
   padding: 15px 40px;
   background-color: var(--Cyan);
@@ -256,24 +262,79 @@ p {
 
 /************Shorten Link**************/
 .shorten-link {
+  text-align: center;
+}
+.shorten-link__card {
   width: 60%;
   background: url("images/bg-shorten-desktop.svg"), var(--DarkViolet);
   background-position: top center;
   padding: 2rem;
-  margin: auto;
+  border-radius: 0.7rem;
+  position: relative;
   max-width: 800px;
+  bottom: 40px;
+  margin: auto;
+}
+.shorten-link__card p {
+  position: absolute;
+  font-size: 16px;
+  max-width: 300px;
+  color: var(--Red);
+  display: none;
+}
+.shorten-link__content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  border-radius: 0.7rem;
-  bottom: 40px;
-  position: relative;
+}
+.shorten-link__display {
+  background-color: var(--White);
+  max-width: 700px;
+  width: 90%;
+  /* max-width: 700px; */
+  margin: 0 auto 20px auto;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: scroll;
+}
+/* ::-webkit-scrollbar {
+  width: none; 
+  background: none; 
+} */
+.shorten-link__display,
+.shorten-link__display div {
+  display: flex;
+  align-items: center;
+}
+.shorten-link__display div {
+  gap: 15px;
+}
+.shorten-link__display .orginal-url {
+  font-weight: 500;
+}
+.shorten-link__display .shorten-url {
+  color: var(--Cyan);
+  font-weight: 600;
+}
+.shorten-link__display .copy-url {
+  background-color: var(--Cyan);
+  color: var(--White);
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.shorten-link__display .copy-url:hover {
+  filter: brightness(1.05);
 }
 .shorten-link__input {
   width: 70%;
   border: 2px solid transparent;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   outline: 0;
   padding: 15px;
 }
@@ -285,18 +346,27 @@ p {
   outline-offset: 0;
 }
 @media only screen and (max-width: 980px) {
-  .shorten-link {
-    flex-direction: column;
+  .shorten-link__card {
     background: url("images/bg-shorten-mobile.svg"), var(--DarkViolet);
     background-repeat: no-repeat;
     background-size: cover;
     width: 90%;
     max-width: 700px;
   }
+  .shorten-link__content {
+    flex-direction: column;
+  }
   .shorten-link__input,
   .button--square {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .shorten-link__display,
+  .shorten-link__display div {
+    flex-direction: column;
   }
 }
 
