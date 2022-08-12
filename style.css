@@ -352,6 +352,10 @@ select:focus {
   outline: 0;
   padding: 16px 20px;
   font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+::placeholder {
+  font-family: "Poppins", sans-serif;
 }
 .shorten-link__input:focus {
   border: 2px solid var(--Gray);
