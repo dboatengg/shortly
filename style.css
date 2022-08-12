@@ -227,6 +227,7 @@ select:focus {
 .hero__content img {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 @media only screen and (max-width: 980px) {
@@ -235,7 +236,6 @@ select:focus {
   }
   .hero__content img {
     position: relative;
-    /* width: 100%; */
   }
   .hero__right {
     order: 1;
