@@ -40,6 +40,9 @@ function printUrl(event) {
     parenturl.appendChild(div);
     parenturl.appendChild(deleteIcon);
 
+    // localStorage.setItem("person", JSON.stringify(person));
+    // var retrievedPerson = JSON.parse(localStorage.getItem("person"));
+
     shortenLink.appendChild(parenturl);
     console.log(parenturl);
     shortenLinkInput.value = "";
