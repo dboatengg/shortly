@@ -589,7 +589,6 @@ select:focus {
   .footer__content .social i {
     transition: all 0.1s ease-in-out;
     color: var(--White);
-    gap: 1rem;
-    font-size: 20px;
+    gaap: 1.1rem
   }
 }
