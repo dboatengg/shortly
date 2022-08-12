@@ -265,13 +265,13 @@ select:focus {
   text-align: center;
 }
 .shorten-link__card {
-  width: 60%;
+  width: 80%;
   background: url("images/bg-shorten-desktop.svg"), var(--DarkViolet);
   background-position: top center;
-  padding: 2rem;
-  border-radius: 0.7rem;
+  padding: 3rem;
+  border-radius: 5px;
   position: relative;
-  max-width: 800px;
+  max-width: 1000px;
   bottom: 40px;
   margin: auto;
 }
@@ -292,13 +292,11 @@ select:focus {
   background-color: var(--White);
   max-width: 1000px;
   width: 90%;
-  /* max-width: 700px; */
   margin: 0 auto 20px auto;
   justify-content: space-between;
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
-  /* overflow-x: hidden; */
   position: relative;
   overflow-x: scroll;
   gap: 1rem;
@@ -348,11 +346,14 @@ select:focus {
   cursor: pointer;
 }
 .shorten-link__input {
-  width: 70%;
+  flex: 1;
   border: 2px solid transparent;
   border-radius: 5px;
   outline: 0;
-  padding: 15px;
+  padding: 16px 20px;
+}
+.shorten-link__input:focus {
+  border: 2px solid var(--Gray);
 }
 .shorten-link__input:focus,
 ::placeholder {
@@ -367,6 +368,7 @@ select:focus {
     background-repeat: no-repeat;
     background-size: cover;
     width: 90%;
+    padding: 3rem 1.5rem;
     max-width: 700px;
   }
   .shorten-link__content {

@@ -48,6 +48,7 @@ function printUrl(event) {
     copyArr = Array.from(copyButton);
     copyArr.forEach((element) => {
       element.addEventListener("click", () => {
+        // copyTextArr.select();
         element.innerHTML = "copied!";
         element.style.backgroundColor = "hsl(257, 27%, 26%)";
       });
@@ -64,6 +65,9 @@ function printUrl(event) {
         displayBoxArr[index].style.display = "none";
       });
     });
+
+    // document.execCommand("copy");
+    // alert("Copied the text: " + copyText.value);
   } else {
     //display error msg
     shortenLinkCardText.style.display = "block";
