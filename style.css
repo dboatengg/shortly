@@ -305,7 +305,7 @@ select:focus {
   border-radius: 5px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
   position: relative;
-  overflow-x: scroll;
+  overflow: scroll;
   gap: 1rem;
   text-align: center;
 }
@@ -353,7 +353,7 @@ select:focus {
   cursor: pointer;
 }
 .fa-times {
-  padding: 5px;
+  padding: 1px 3px;
 }
 .shorten-link__input {
   flex: 1;
@@ -394,6 +394,17 @@ select:focus {
   .shorten-link__display,
   .shorten-link__display div {
     flex-direction: column;
+  }
+  .shorten-link__display .close {
+    position: absolute;
+    right: 12px;
+    /* color: var(--Red); */
+    color: var(--White);
+    background-color: var(--Red);
+    cursor: pointer;
+  }
+  .fa-times {
+    padding: 3px 5px;
   }
 }
 
