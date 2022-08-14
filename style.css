@@ -388,6 +388,9 @@ select:focus {
     width: 100%;
     text-align: center;
   }
+  .shorten-link__display div {
+    margin-right: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
