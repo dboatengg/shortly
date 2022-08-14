@@ -234,9 +234,11 @@ select:focus {
 @media only screen and (max-width: 980px) {
   .hero__content {
     flex-direction: column;
+    height: auto;
   }
   .hero__content img {
     position: relative;
+    width: 100%;
   }
   .hero__right {
     order: 1;
