@@ -62,6 +62,7 @@ function printUrl(event) {
 
     displayBoxArr = Array.from(displayBox);
     deleteIconArr = Array.from(deleteIcon);
+    // deleteIconArr.style.padding = "5px";
 
     deleteIconArr.forEach((element, index) => {
       element.addEventListener("click", () => {
