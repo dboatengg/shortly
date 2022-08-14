@@ -23,7 +23,8 @@ function printUrl(event) {
     let div = document.createElement("div");
 
     let shortenurl = document.createElement("p");
-    shortenurl.innerHTML = shortenLinkInput.value;
+    // shortenurl.innerHTML = shortenLinkInput.value;
+    shortenurl.innerHTML = "shortened-link-here";
     shortenurl.classList.add("shorten-url");
 
     let copyurl = document.createElement("div");
