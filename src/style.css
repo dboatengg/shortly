@@ -1,6 +1,6 @@
 /*===================================(Header)=====================================*/
 .navbar {
-  height: 7rem;
+  height: 8rem;
 }
 .navbar__content {
   display: grid;
@@ -20,7 +20,7 @@
 }
 .menu,
 .navbar__buttons {
-  gap: 1.5rem;
+  gap: 3rem;
 }
 .navbar__menu {
   justify-content: space-between;
@@ -29,9 +29,9 @@
   display: none;
   background-color: transparent;
   border: none;
-  font-size: 3rem;
   cursor: pointer;
   outline: none;
+  font-size: 3rem;
 }
 .menu a,
 .btn-login {
@@ -88,7 +88,7 @@
   }
   .menu,
   .navbar__buttons {
-    gap: 3rem;
+    gap: 2rem;
   }
   .navbar__buttons {
     width: 100%;
@@ -108,5 +108,68 @@
   .menu a:hover,
   .btn-login:hover {
     color: var(--white);
+  }
+}
+
+/*===================================(Hero)=====================================*/
+.hero {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.hero__text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 500px;
+}
+.hero__image {
+  position: absolute;
+  left: 52%;
+  width: 82rem;
+}
+.hero__text .title {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.hero__text .btn {
+  color: var(--white);
+  display: block;
+}
+@media (max-width: 800px) {
+  .hero__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    justify-items: center;
+  }
+  .hero__text {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__image {
+    position: unset;
+    order: 1;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  .hero__text .title {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1695px) {
+  .hero__image {
+    width: 90rem;
   }
 }

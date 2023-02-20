@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { VscChromeClose } from "react-icons/vsc";
+import { CgMenu } from "react-icons/cg";
+import { GrClose } from "react-icons/gr";
 
 /****import images ******/
 import logo from "../assets/logo.svg";
@@ -21,7 +21,7 @@ const Header = () => {
             <img src={logo} alt="Shortly logo" />
           </Link>
           <button onClick={handleMenuClick} className="navbar__toggle">
-            {showNav ? <VscChromeClose /> : <RxHamburgerMenu />}
+            {showNav ? <GrClose /> : <CgMenu />}
           </button>
         </div>
         <div

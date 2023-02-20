@@ -31,6 +31,13 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--gray);
   font-weight: 500;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  color: var(--very-dark-violet);
+  line-height: 1.2;
 }
 ul {
   margin: 0;
@@ -42,6 +49,13 @@ li {
 a {
   text-decoration: none;
   color: var(--gray);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  line-height: 1.6;
 }
 .container {
   max-width: 1536px;
@@ -59,7 +73,7 @@ a {
   }
 }
 .btn {
-  padding: 1.2rem 4rem;
+  padding: 1rem 3rem;
   background-color: var(--cyan);
   transition: var(--transition);
 }
@@ -70,5 +84,5 @@ a {
   border-radius: 5rem;
 }
 .btn--square {
-  border-radius: 0.5rem;
+  border-radius: 4px;
 }
