@@ -19,7 +19,7 @@ Easybank is a Frontendmentor challege. This project is a landing page project fo
 
 ## Demo
 
-Check out the [live demo](https://www.example.com/) to see the page in action!
+Check out the [live demo](https://shortlyofficial.netlify.app) to see the page in action!
 
 ## Getting Started
 
